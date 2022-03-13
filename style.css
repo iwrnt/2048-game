@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1B1A17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 520px;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+#result-text {
+    font-size: 3rem;
+    color: #E45826;
+    font-weight: bold;
+}
+
+#play-again-btn {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #E6D5B8;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+#board {
+    position: relative;
+    border-radius: 8px;
+    width: 520px;
+    height: 520px;
+    background-color: #E6D5B8;
+    padding: 8px;
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(4, 120px);
+    gap: 8px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #CEAB93;
+    border-radius: 8px;
+}
+
+.tile {
+    position: absolute;
+    top: calc(var(--x) * (120px + 8px) + 8px);
+    left: calc(var(--y) * (120px + 8px) + 8px);
+    background-color: hsl(20, 100%, var(--background-lightness));
+    color: var(--text-color);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 8px;
+}
